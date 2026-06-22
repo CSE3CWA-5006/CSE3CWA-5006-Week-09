@@ -1,0 +1,283 @@
+html {
+  font-size: 16px;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background: #f5f7fb;
+  color: #1f2937;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-bottom: 72px;
+}
+
+a {
+  color: #0f6cbd;
+}
+
+.navbar {
+  background: #ffffff;
+}
+
+.brand-lockup {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 650;
+  gap: 10px;
+}
+
+.brand-mark {
+  background: conic-gradient(from 90deg, #f25022 0 25%, #7fba00 0 50%, #00a4ef 0 75%, #ffb900 0);
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.app-shell {
+  display: grid;
+  gap: 20px;
+}
+
+.hero-band {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 28px;
+}
+
+.eyebrow {
+  color: #0f6cbd;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.hero-band h1 {
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.hero-copy {
+  color: #4b5563;
+  margin: 8px 0 0;
+  max-width: 680px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.ms-button {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #c7cdd8;
+  border-radius: 6px;
+  color: #111827;
+  display: inline-flex;
+  font-weight: 600;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+}
+
+.ms-button.primary {
+  background: #0f6cbd;
+  border-color: #0f6cbd;
+  color: #ffffff;
+}
+
+.empty-state,
+.panel,
+.metric-tile,
+.warning-panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.empty-state {
+  padding: 28px;
+}
+
+.empty-state h2,
+.panel h2,
+.warning-panel h2 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 0;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metric-tile {
+  padding: 18px;
+}
+
+.metric-tile span {
+  color: #4b5563;
+  display: block;
+  font-size: 0.88rem;
+}
+
+.metric-tile strong {
+  color: #111827;
+  display: block;
+  font-size: 2rem;
+  font-weight: 650;
+  margin-top: 6px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel,
+.warning-panel {
+  padding: 18px;
+}
+
+.panel-header {
+  align-items: center;
+  border-bottom: 1px solid #edf0f5;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.panel-header span {
+  color: #6b7280;
+  font-size: 0.88rem;
+}
+
+.mail-list {
+  display: grid;
+  gap: 10px;
+}
+
+.mail-row {
+  border-left: 3px solid #0f6cbd;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 8px 0 8px 12px;
+}
+
+.mail-row.urgent {
+  border-left-color: #d13438;
+}
+
+.mail-row a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.mail-row p,
+.muted,
+.team-description {
+  color: #6b7280;
+  margin: 4px 0 0;
+}
+
+.team-details {
+  border-bottom: 1px solid #edf0f5;
+  padding: 10px 0;
+}
+
+.team-details summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 650;
+  justify-content: space-between;
+}
+
+.team-details small {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.member-grid {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.member-row {
+  background: #f8fafc;
+  border: 1px solid #edf0f5;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1.2fr 1.5fr 0.7fr;
+  padding: 8px 10px;
+}
+
+.warning-panel {
+  border-color: #f1c7c8;
+}
+
+.warning-panel p {
+  color: #a4262c;
+  margin: 8px 0 0;
+}
+
+.setup-page {
+  display: grid;
+  gap: 16px;
+}
+
+.setup-page h1 {
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.setup-page pre {
+  background: #111827;
+  border-radius: 8px;
+  color: #f9fafb;
+  margin: 12px 0 0;
+  overflow-x: auto;
+  padding: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero-band,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-band {
+    align-items: flex-start;
+    display: grid;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-row {
+    grid-template-columns: 1fr;
+  }
+}

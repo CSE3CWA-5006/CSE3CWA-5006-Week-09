@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+*.user
+
+# Local-only configuration. These must never be committed: they hold real
+# Entra credentials or Azure deployment passwords.
+appsettings.Local.json
+appsettings.*.Local.json
+appsettings.Production.json
+*.PublishSettings
+*.publishsettings
+Properties/PublishProfiles/*.pubxml
+Properties/PublishProfiles/*.pubxml.user
+
+# Deployment artefacts
+*.zip

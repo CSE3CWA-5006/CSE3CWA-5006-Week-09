@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Example Zip Deploy publish profile for a Linux App Service.
+
+Copy this file to AzureAppService.pubxml and fill in the placeholders from
+
+    Azure Portal -> App Service -> Overview -> "..." -> Download publish profile
+
+Open the downloaded .PublishSettings file and read publishUrl / userName /
+userPWD, then map them onto PublishUrl / UserName / Password below.
+
+The real AzureAppService.pubxml is intentionally .gitignore'd: it contains the
+deployment password for your App Service. Never commit it.
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <WebPublishMethod>ZipDeploy</WebPublishMethod>
+    <PublishProvider>AzureWebSite</PublishProvider>
+    <PublishProtocol>ZipDeploy</PublishProtocol>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+
+    <!-- Copy from App Service -> Overview -> Default domain -->
+    <SiteUrlToLaunchAfterPublish>https://REPLACE-WITH-DEFAULT-DOMAIN</SiteUrlToLaunchAfterPublish>
+    <LaunchSiteAfterPublish>false</LaunchSiteAfterPublish>
+
+    <!-- /subscriptions/<sub>/resourceGroups/<rg>/providers/Microsoft.Web/sites/<app> -->
+    <ResourceId>/subscriptions/REPLACE-WITH-SUBSCRIPTION-ID/resourceGroups/REPLACE-WITH-RESOURCE-GROUP/providers/Microsoft.Web/sites/REPLACE-WITH-APP-NAME</ResourceId>
+    <DeployIisAppPath>REPLACE-WITH-APP-NAME</DeployIisAppPath>
+
+    <!-- From the downloaded publish profile (Zip Deploy section) -->
+    <UserName>$REPLACE-WITH-APP-NAME</UserName>
+    <Password>REPLACE-WITH-DEPLOYMENT-PASSWORD</Password>
+
+    <!-- Scheme + SCM host + port only. The publish task appends /api/zipdeploy.
+         publishUrl in the .PublishSettings file looks like
+         "myapp-abc123.scm.australiaeast-01.azurewebsites.net:443". -->
+    <PublishUrl>https://REPLACE-WITH-SCM-HOST:443</PublishUrl>
+
+    <DestinationAppUrl>https://REPLACE-WITH-DEFAULT-DOMAIN</DestinationAppUrl>
+    <IgnoreDeployManagedRuntimeVersion>False</IgnoreDeployManagedRuntimeVersion>
+    <_DestinationType>AzureWebSite</_DestinationType>
+  </PropertyGroup>
+</Project>
